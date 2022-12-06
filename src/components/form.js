@@ -20,31 +20,32 @@ function Form() {
     }
   
     return (
-      <form className={classes.formWrap} onSubmit={handleSubmit}>
-        <div>
-        <label className={classes.mail}>이메일</label><br/>
-        <input
-          className={classes.emailinput}
-          type="text"
-          name="email"
-          value={values.email}
-          onChange={handleChange}
-        />
-        </div>
-        <div>
-          <label className={classes.pass}>비밀번호</label><br/>
+        <form className={classes.formWrap} onSubmit={handleSubmit}>
+        <h3>로 그 인</h3>
+          <div>
+          <label className={classes.mail}>이메일</label><br/>
           <input
-          className={classes.passinput}
-            type="password"
-            name="password"
-            value={values.password}
+            className={classes.emailinput}
+            type="text"
+            name="email"
+            value={values.email}
             onChange={handleChange}
           />
-        </div>
-        <div>
-        <button className={classes.btn} type="submit">로그인</button>
-        </div>
-      </form>
+          </div>
+          <div>
+            <label className={classes.pass}>비밀번호</label><br/>
+            <input
+            className={classes.passinput}
+              type="password"
+              name="password"
+              value={values.password}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+          <button className={classes.btn} type="submit">로그인</button>
+          </div>
+        </form>
     )
   }
 
