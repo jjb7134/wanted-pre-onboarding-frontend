@@ -1,21 +1,24 @@
 import {Route,Routes} from 'react-router-dom';
 
 import Sign from './components/sign';
-import Welcome from './components/welcome';
-import Form from './components/form';
-import Join from './components/join';
+import Welcome from './components/root/welcome';
+import Form from './components/root/form';
+import Join from './components/root/join';
+import Todolist from './components/todo/Todolist';
+
 
 function App() {
   return (
     <div>
-      <Welcome />
+      
       {/* 여러 페이지 라우트 처리 */}
       <Routes>
         {/* /경로 */}
-        <Route path='/' exact element={ <Form/>} />
-        <Route path='/join' exact element={ <Join/>} />
+        <Route path='/' exact element={ <div><Welcome /> <Form/> <Sign /></div>} />
+        <Route path='/join' element={ <div><Welcome /> <Join/> <Sign /></div>} />
+        <Route path='/todo' element={ <Todolist/>} />
       </Routes>
-      <Sign />
+      
     </div>
   );
 }

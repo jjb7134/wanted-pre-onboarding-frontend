@@ -1,4 +1,4 @@
-import classes from './welcome.module.css'
+import classes from './welcome.module.css';
 
 function Welcome(params) {
     return (
